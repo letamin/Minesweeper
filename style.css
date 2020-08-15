@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(192, 197, 199);
+}
+
+.board {
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  background-color: #dcd6bc;
+  font-family: sans-serif;
+}
+
+.cell {
+  background: grey;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+  font-size: 1.2em;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+}
+
+.cell:hover {
+  opacity: 0.75;
+}
+
+.checked {
+  background-color: #ebeae9;
+  border: 2px solid;
+  border-color: #9c998d;
+}
+
+.game-over-layer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 2em;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  color: #fff;
+  visibility: hidden;
+  font-size: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-restart {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 0.5em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.btn-restart:hover {
+  opacity: 0.75;
+}
+
+.game-over-layer.active {
+  visibility: visible;
+}
+
+.game-section {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.game-title {
+  text-align: center;
+  margin: 10px;
+  font-size: 3em;
+}
+
+.flags-section {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
